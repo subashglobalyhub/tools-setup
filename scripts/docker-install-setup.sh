@@ -81,7 +81,19 @@ check_docker_installed() {
         return 1
     fi
 }
-
+check_trivy_installed() {
+    print_separator
+    print_header "3 - make"
+    print_separator
+    sleep 2
+    if command -v trivy &>/dev/null; then
+        print_success "trivy is already installed"  
+        return 0
+    else
+        print_fail "trivy is not found in system" 
+        return 1
+    fi
+}
 check_make_installed() {
     print_separator
     print_header "3 - make"
@@ -91,7 +103,7 @@ check_make_installed() {
         print_success "make is already installed"  
         return 0
     else
-        echo -e "make is not found in system" 
+        print_fail "make is not found in system" 
         return 1
     fi
 }

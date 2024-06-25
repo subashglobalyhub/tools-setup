@@ -8,8 +8,6 @@ docker-install: ## Install dependencies for the scanner
 other-install: ## Upload the scanned results.
 	@bash scripts/other-install.sh
 
-custom-task-arg: ## Upload the scanned results.
-	@bash scripts/new-custom-task.sh $(ARGS)
 
 tools-upgrade: ## Upgrade the scanner.
 	@bash scripts/upgrade-install.sh

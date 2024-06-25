@@ -30,9 +30,22 @@ git clone https://github.com/subashglobalyhub/tools-setup.git
 cd tools-setup
 chmod +x initial-setup.sh
 ./initial-setup.sh
+```
+![alt text](Screenshots/0.0-project-setup.png)
+```
+
+
+```
+Test setup is working properly or not 
+```bash
 make 
 or
 make help
+```
+![alt text](Screenshots/0.1-veryfing-setup.png)
+```
+
+
 ```
 
 ## 2.1 Docker-setup
