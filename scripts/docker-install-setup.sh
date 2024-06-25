@@ -84,16 +84,16 @@ check_docker_installed() {
     fi
 }
 
-check_trivy_installed() {
+check_make_installed() {
     print_separator
-    print_header "3 - TRIVY"
+    print_header "3 - make"
     print_separator
     sleep 2
-    if command -v trivy &>/dev/null; then
-        print_success "Trivy is already installed"  
+    if command -v make &>/dev/null; then
+        print_success "make is already installed"  
         return 0
     else
-        echo -e "Trivy is not found in system" 
+        echo -e "make is not found in system" 
         return 1
     fi
 }
@@ -172,6 +172,25 @@ install_trivy() {
     print_separator
 }
 
+install_make() {
+    if check_trivy_installed; then
+        return
+    fi
+
+    os_description=$(lsb_release -a 2>/dev/null | grep "Description:" | awk -F'\t' '{print $2}')
+    print_init "$os_description Detected on your system"
+    if grep -q 'Ubuntu' /etc/os-release; then
+        print_init "Initializing Maker installation process"
+        print_separator
+        sudo apt-get update
+        sudo apt-get install -y make
+        print_success "Make installed successfully"
+    else
+        echo "Unsupported Linux distribution"
+        exit 1
+    fi
+    print_separator
+}
 docker-post-setup() {
     print_header "4 - DOCKER-POST-SETUP"
     if grep -q '^docker:' /etc/group; then
