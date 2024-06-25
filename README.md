@@ -25,9 +25,11 @@ A brief description of what this project does and who it's for
 
 ## 2 Project Init
 ```bash
-# clone the repository
+# clonning and setupping the into local system
 git clone https://github.com/subashglobalyhub/tools-setup.git
 cd tools-setup
+chmod +x initial-setup.sh
+./initial-setup.sh
 make 
 or
 make help

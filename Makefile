@@ -25,5 +25,5 @@ help:
 	@echo ""
 
 	@echo "support and contact details"
-	@echo "Mail : subash.chaudhary@globalyhub.com""
+	@echo "Mail : subash.chaudhary@globalyhub.com"
 	@echo "Phone: +977 9823827047"  

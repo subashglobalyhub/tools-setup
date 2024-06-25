@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 # ------- LARGE Banner display section start
 
 function print_separator {
@@ -173,7 +171,7 @@ install_trivy() {
 }
 
 install_make() {
-    if check_trivy_installed; then
+    if check_make_installed; then
         return
     fi
 
@@ -184,6 +182,7 @@ install_make() {
         print_separator
         sudo apt-get update
         sudo apt-get install -y make
+        sudo apt install -y make-guile
         print_success "Make installed successfully"
     else
         echo "Unsupported Linux distribution"
