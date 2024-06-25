@@ -8,6 +8,7 @@ A brief description of what this project does and who it's for
 - [1. Repo Description](#1-repo-description)
   - [2 Project Init](#2-project-init)
   - [2.1 Docker-setup](#21-docker-setup)
+    - [2.1.1 Docker-installation](#211-docker-installation)
   - [Feedback and support](#feedback-and-support)
 
 
@@ -34,7 +35,6 @@ chmod +x initial-setup.sh
 ![alt text](Screenshots/0.0-project-setup.png)
 ```
 
-
 ```
 Test setup is working properly or not 
 ```bash
@@ -45,7 +45,6 @@ make help
 ![alt text](Screenshots/0.1-veryfing-setup.png)
 ```
 
-
 ```
 
 ## 2.1 Docker-setup
@@ -53,6 +52,23 @@ make help
 docker images
 ```
 
+### 2.1.1 Docker-installation
+```
+make docker-install
+```
+![alt text](Screenshots/2.0-docker-intall-setup.png)
+
+```
+```
+Now, testing docker is running properly or not.
+```
+# Checking some commands
+docker version
+docker pull ubuntu
+docker images
+docker run -td --name subash-webserver -p 8080:80 nginx
+```
+![alt text](Screenshots/2.0.1-run-image-using-docker.png)
 
 ## Feedback and support
 

@@ -83,7 +83,7 @@ check_docker_installed() {
 }
 check_trivy_installed() {
     print_separator
-    print_header "3 - make"
+    print_header "3 - trivy"
     print_separator
     sleep 2
     if command -v trivy &>/dev/null; then
@@ -96,7 +96,7 @@ check_trivy_installed() {
 }
 check_make_installed() {
     print_separator
-    print_header "3 - make"
+    print_header "4 - make"
     print_separator
     sleep 2
     if command -v make &>/dev/null; then
@@ -231,6 +231,7 @@ echo "User successfully logged in again."
 main () {
 install_figlet
 install_docker
+install_make
 install_trivy
 docker-post-setup
 }
