@@ -75,5 +75,3 @@ docker run -td --name subash-webserver -p 8080:80 nginx
 If you have any feedback, please reach out to us at <br> 
 **Mail:** subash.chaudhary@globalyhub.com <br>
 **Phone:** +977 9823827047 <br>
-
-
